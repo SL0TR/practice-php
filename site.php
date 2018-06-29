@@ -8,20 +8,23 @@
   <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
 </head>
 <body>
-
+  <h1>PHP!</h1>
   <?php
-    $obj = 'CodE Lore';
-
-    echo "<h1>Hello!</h1>";
-    echo strtoupper($obj);
-    echo "<br>";
-    echo str_replace('CodE', 'Food', $obj);
-    echo "<br>";
-    echo strlen($obj);
-    echo "<br>";
-    echo $obj[0];
-    echo "<br>";
-    echo substr($obj, 5);
+    echo abs(-100);
+    echo '<br>';
+    echo pow(2, 4);
+    echo '<br>';
+    echo sqrt(20);
+    echo '<br>';
+    echo round(sqrt(20));
+    echo '<br>';
+    echo ceil(sqrt(20));
+    echo '<br>';
+    echo floor(sqrt(20));
+    echo '<br>';
+    echo max(2, 10);
+    echo '<br>';
+    echo min(10, 2);
   ?>
 
 </body>
