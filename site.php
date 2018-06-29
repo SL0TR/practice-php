@@ -8,24 +8,18 @@
   <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
 </head>
 <body>
-  <h1>PHP!</h1>
-  <?php
-    echo abs(-100);
-    echo '<br>';
-    echo pow(2, 4);
-    echo '<br>';
-    echo sqrt(20);
-    echo '<br>';
-    echo round(sqrt(20));
-    echo '<br>';
-    echo ceil(sqrt(20));
-    echo '<br>';
-    echo floor(sqrt(20));
-    echo '<br>';
-    echo max(2, 10);
-    echo '<br>';
-    echo min(10, 2);
-  ?>
 
+  <form action="site.php" method="get">
+    Name: <input type="text" name="name">
+    Email: <input type="email" name="email">
+    <input type="submit">
+  </form>
+  <br>
+  <?php
+    echo $_GET["name"];
+    echo "<br>";
+    echo $_GET["email"];
+  ?>
+  
 </body>
 </html>
