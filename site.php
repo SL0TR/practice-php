@@ -10,18 +10,14 @@
 <body>
 
   <form action="site.php" method="post">
-    apples: <input type="checkbox" name="fruits[]" value="apples">
-    <br>
-    oranges: <input type="checkbox" name="fruits[]" value="oranges">
-    <br>
-    pears: <input type="checkbox" name="fruits[]" value="pears">
+    <input type="text" name="student">
     <br>
     <input type="submit">
   </form>
   <br>
   <?php
-    $fruits = $_POST["fruits"];
-    echo $fruits[1];
+    $grades = array("Jim" => "A+", "Pam" => "B-", "Oscar" => "C+");
+    echo $grades[$_POST["student"]];
   ?>
   
 </body>
