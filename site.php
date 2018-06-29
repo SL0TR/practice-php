@@ -10,15 +10,23 @@
 <body>
 
   <form action="site.php" method="get">
-    Name: <input type="text" name="name">
-    Email: <input type="email" name="email">
+    Color: <input type="text" name="color">
+    <br>
+    Plura: <input type="text" name="pluralNoun">
+    <br>
+    celeb: <input type="text" name="celeb">
     <input type="submit">
   </form>
   <br>
+  Answer:
   <?php
-    echo $_GET["name"];
-    echo "<br>";
-    echo $_GET["email"];
+    $color = $_GET["color"];
+    $pluralNoun = $_GET["pluralNoun"];
+    $celeb = $_GET["celeb"];
+
+    echo "Roses are $color <br>";
+    echo "$pluralNoun are blue <br>";
+    echo "I love $celeb <br>";
   ?>
   
 </body>
