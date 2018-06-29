@@ -10,15 +10,18 @@
 <body>
 
   <?php
-    $obj = 'code';
-    $adj = 'awesome';
-    $num = 10;
+    $obj = 'CodE Lore';
 
     echo "<h1>Hello!</h1>";
-    echo "<p>This is my $adj $obj</p>";
-    echo "<p>This is my $adj $obj</p>";
-    echo "<p>This is my $adj $obj</p>";
-    echo "<p>This is the number $num</p>";
+    echo strtoupper($obj);
+    echo "<br>";
+    echo str_replace('CodE', 'Food', $obj);
+    echo "<br>";
+    echo strlen($obj);
+    echo "<br>";
+    echo $obj[0];
+    echo "<br>";
+    echo substr($obj, 5);
   ?>
 
 </body>
