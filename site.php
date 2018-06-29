@@ -9,24 +9,19 @@
 </head>
 <body>
 
-  <form action="site.php" method="get">
-    Color: <input type="text" name="color">
+  <form action="site.php" method="post">
+    apples: <input type="checkbox" name="fruits[]" value="apples">
     <br>
-    Plura: <input type="text" name="pluralNoun">
+    oranges: <input type="checkbox" name="fruits[]" value="oranges">
     <br>
-    celeb: <input type="text" name="celeb">
+    pears: <input type="checkbox" name="fruits[]" value="pears">
+    <br>
     <input type="submit">
   </form>
   <br>
-  Answer:
   <?php
-    $color = $_GET["color"];
-    $pluralNoun = $_GET["pluralNoun"];
-    $celeb = $_GET["celeb"];
-
-    echo "Roses are $color <br>";
-    echo "$pluralNoun are blue <br>";
-    echo "I love $celeb <br>";
+    $fruits = $_POST["fruits"];
+    echo $fruits[1];
   ?>
   
 </body>
