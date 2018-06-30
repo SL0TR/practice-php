@@ -11,25 +11,31 @@
   <?php include "header.html" ?>
 
   <?php 
-    class Book {
-      var $title;
-      var $author;
-      var $pages;
+    class Student {
+      var $name;
+      var $major;
+      var $gpa;
 
-      function __construct($aTitle, $aAuthor, $aPages) {
-        $this->title = $aTitle;
-        $this->author = $aAuthor;
-        $this->pages = $aPages;
+      function __construct($name, $major, $gpa) {
+        $this->name = $name;
+        $this->major = $major;
+        $this->gpa = $gpa;
+      }
+
+      function hasHonors() {
+       if ($this->gpa >= 3.5) {
+          return "true";
+       } else {
+          return "false";
+       }
       }
 
     }
 
-    $book1 = new Book("Harry Potter", "JK Rowling", 400);
-    echo $book1->author;
-    echo "<br>";
+    $student1 = new Student("Jim", "CSE", 4.0);
+    $student2 = new Student("Carry", "BBA", 3.0);
 
-    $book2 = new Book("Lord of the Rings", "Tolkien", 700);
-    echo $book2->author;
+    echo $student2->hasHonors();
 
   ?>
 
