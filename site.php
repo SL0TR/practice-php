@@ -8,12 +8,21 @@
   <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 </head>
 <body>
-
   <?php include "header.html" ?>
 
-  <h1>Waba laba dub dub</h1>
+  <?php 
+    $title = "My first post";
+    $author = "Mohaimin";
+    $wordCount = 400;
+    include "article-header.php";
+    echo "<br>";
+    echo "<br>";
+  ?>
+  <?php 
+    include "useful-tools.php";
+    sayHi("Mohaimin");
+  ?>
 
   <?php include "footer.html" ?>
-  
 </body>
 </html>
