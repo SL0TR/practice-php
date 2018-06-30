@@ -11,31 +11,31 @@
   <?php include "header.html" ?>
 
   <?php 
-    class Student {
-      var $name;
-      var $major;
-      var $gpa;
+    class Movie {
+      public $title;
+      private $rating;
 
-      function __construct($name, $major, $gpa) {
-        $this->name = $name;
-        $this->major = $major;
-        $this->gpa = $gpa;
+      function __construct($title, $rating) {
+        $this->title = $title;
+        $this->setRating($rating);
       }
 
-      function hasHonors() {
-       if ($this->gpa >= 3.5) {
-          return "true";
-       } else {
-          return "false";
-       }
+      function getRating() {
+        return $this->rating;
+      }
+
+      function setRating($rating) {
+        if ($rating == 'G' || $rating == 'PG' || $rating == 'PG-12' || $rating == 'R' || $rating == 'NR') {
+          $this->rating = $rating;
+        } else {
+          $this->rating = "NR";
+        }
       }
 
     }
 
-    $student1 = new Student("Jim", "CSE", 4.0);
-    $student2 = new Student("Carry", "BBA", 3.0);
-
-    echo $student2->hasHonors();
+    $avengers = new Movie("Avengers", "DOG");
+    echo $avengers->getRating();
 
   ?>
 
