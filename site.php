@@ -5,20 +5,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Page Title</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 </head>
 <body>
 
-  <form action="site.php" method="post">
-    <input type="text" name="student">
-    <br>
-    <input type="submit">
-  </form>
-  <br>
-  <?php
-    $grades = array("Jim" => "A+", "Pam" => "B-", "Oscar" => "C+");
-    echo $grades[$_POST["student"]];
-  ?>
+  <?php include "header.html" ?>
+
+  <h1>Waba laba dub dub</h1>
+
+  <?php include "footer.html" ?>
   
 </body>
 </html>
