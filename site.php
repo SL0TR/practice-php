@@ -11,16 +11,24 @@
   <?php include "header.html" ?>
 
   <?php 
-    $title = "My first post";
-    $author = "Mohaimin";
-    $wordCount = 400;
-    include "article-header.php";
-    echo "<br>";
-    echo "<br>";
-  ?>
-  <?php 
-    include "useful-tools.php";
-    sayHi("Mohaimin");
+    class Book {
+      var $title;
+      var $author;
+      var $pages;
+    }
+
+    $book1 = new Book;
+    $book1->title = "Harry Potter";
+    $book1->author = "JK Rowling";
+    $book1->pages = 400;
+
+    $book2 = new Book;
+    $book2->title = "Lord of the Rings";
+    $book2->author = "Tolkien";
+    $book2->pages = 700;
+
+    echo $book2->author;
+
   ?>
 
   <?php include "footer.html" ?>
